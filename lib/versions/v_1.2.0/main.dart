@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sueltos/versions/v_0.1.0/pages/home.dart';
+import 'package:sueltos/versions/v_1.2.0/pages/import.dart';
 
 void main() {
   runApp(const MainApp());
@@ -13,7 +13,7 @@ class MainApp extends StatelessWidget {
     // final theme = Theme.of(context);
     return MaterialApp(
       theme: appTheme(),
-      home: const Home(),
+      home: HomePage(),
       debugShowCheckedModeBanner: false,
     );
   }
@@ -24,17 +24,13 @@ class MainApp extends StatelessWidget {
       appBarTheme: const AppBarTheme(
         elevation: 5,
         color: Colors.deepPurpleAccent,
-        iconTheme: IconThemeData(color: Colors.white),
-        titleTextStyle: TextStyle(color: Colors.white, fontSize: 20),
+        iconTheme: IconThemeData(color: Colors.black),
+        titleTextStyle: TextStyle(color: Colors.black, fontSize: 20),
       ),
       drawerTheme: const DrawerThemeData(
         // backgroundColor: Colors.transparent,
-        backgroundColor: Colors.white,
-        width: 240,
-      ),
-      listTileTheme: const ListTileThemeData(
-        // selectedColor:,
-        selectedTileColor: Colors.transparent,
+        backgroundColor: Colors.white70,
+        // backgroundColor: Colors.white,
       ),
       useMaterial3: true,
       colorScheme: ColorScheme.fromSeed(seedColor: Colors.greenAccent),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sueltos/pages/imports.dart';
+import 'package:sueltos/versions/v_1.0.0/pages/home_page.dart';
+import 'package:sueltos/versions/v_1.0.0/pages/drawer_children/imports.dart';
 
 class MainDrawer extends StatelessWidget {
   const MainDrawer({
@@ -27,7 +28,7 @@ class MainDrawer extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.black,
         image: DecorationImage(
-          image: AssetImage('assets/images/clean_w.webp'),
+          image: AssetImage('assets/images/grey_water.jpg'),
           fit: BoxFit.cover,
         ),
       ),
@@ -38,7 +39,7 @@ class MainDrawer extends StatelessWidget {
             left: 2.0,
             child: Text(
               "A drawer title",
-              style: TextStyle(color: Colors.black, fontSize: 18),
+              style: TextStyle(color: Colors.white, fontSize: 18),
             ),
           )
         ],
@@ -53,12 +54,12 @@ class MainDrawer extends StatelessWidget {
           title: const Text("Home"),
           leading: const Icon(Icons.home),
           onTap: () {
-            Navigator.of(context).pushReplacement(
+            Navigator.pop(context);
+            Navigator.of(context).push(
               MaterialPageRoute(
                 builder: (context) => const HomePage(),
               ),
             );
-            // Navigator.pop(context);
           },
         ),
         ListTile(
@@ -66,6 +67,7 @@ class MainDrawer extends StatelessWidget {
           leading: const Icon(Icons.calendar_month),
           onTap: () {
             Navigator.pop(context);
+            // Navigator.of(context).pushReplacement(
             Navigator.of(context).push(
               MaterialPageRoute(
                 builder: (context) => const Schedule(),
@@ -74,7 +76,7 @@ class MainDrawer extends StatelessWidget {
           },
         ),
         ListTile(
-          title: const Text("Nueva Cita"),
+          title: const Text("Añadir Cita"),
           leading: const Icon(Icons.add_task),
           onTap: () {
             Navigator.pop(context);

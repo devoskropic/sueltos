@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sueltos/widgets/main_drawer.dart';
+import 'package:sueltos/presentation/widgets/main_drawer.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -17,11 +17,13 @@ class HomePage extends StatelessWidget {
       drawer: const MainDrawer(),
       body: Center(
         child: Builder(
-            builder: (context) => ElevatedButton(
-                onPressed: () {
-                  Scaffold.of(context).openDrawer();
-                },
-                child: const Text("Open Drawer"))),
+          builder: (context) => ElevatedButton(
+            onPressed: () {
+              Scaffold.of(context).openDrawer();
+            },
+            child: const Text("Open Drawer"),
+          ),
+        ),
       ),
     );
   }

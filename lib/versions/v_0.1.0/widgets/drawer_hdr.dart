@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:sueltos/versions/v_0.1.0/widgets/menu_options.dart';
+import 'package:sueltos/versions/v_0.1.0/widgets/drawer_options.dart';
 
 class DrawerHdr extends StatelessWidget {
-  const DrawerHdr({
-    super.key,
-    this.onTap,
-  });
+  const DrawerHdr({super.key, this.onTap});
 
   final Function()? onTap;
 
@@ -39,7 +36,7 @@ class DrawerHdr extends StatelessWidget {
               bottom: 3.0,
               left: 2.0,
               child: Text(
-                "Other drawer title",
+                "Drawer header",
                 style: TextStyle(color: Colors.black, fontSize: 16),
               ),
             )
@@ -52,17 +49,17 @@ class DrawerHdr extends StatelessWidget {
   Widget buildMenuItems(BuildContext context) {
     return Column(
       children: [
-        MenuOption(
+        DrawerOption(
           title: "Agenda",
           onTap: onTap,
           leading: const Icon(Icons.calendar_month),
         ),
-        MenuOption(
+        DrawerOption(
           title: "Nueva cita",
           onTap: onTap,
           leading: const Icon(Icons.add_task),
         ),
-        MenuOption(
+        DrawerOption(
           title: "Editar horarios",
           onTap: onTap,
           leading: const Icon(Icons.schedule),
@@ -74,12 +71,12 @@ class DrawerHdr extends StatelessWidget {
             color: Colors.black26,
           ),
         ),
-        MenuOption(
+        DrawerOption(
           title: "Configuracion",
           onTap: onTap,
           leading: const Icon(Icons.settings_outlined),
         ),
-        MenuOption(
+        DrawerOption(
           title: "Cerrar Sesión",
           onTap: onTap,
           leading: const Icon(Icons.logout),

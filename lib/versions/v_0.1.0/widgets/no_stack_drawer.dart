@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:sueltos/versions/v_0.1.0/widgets/menu_options.dart';
+import 'package:sueltos/versions/v_0.1.0/widgets/drawer_options.dart';
 
 class NoStackDrawer extends StatelessWidget {
-  const NoStackDrawer({
-    super.key,
-    this.onTap,
-  });
+  const NoStackDrawer({super.key, this.onTap});
 
   final Function()? onTap;
 
@@ -24,28 +21,30 @@ class NoStackDrawer extends StatelessWidget {
 
   Widget buildHeader(BuildContext context) {
     return const SizedBox(
-      height: 100,
+      height: 110,
       child: DrawerHeader(
         decoration: BoxDecoration(
           color: Colors.black,
           image: DecorationImage(
-            image: AssetImage('assets/images/salon_1.jpg'),
+            image: AssetImage('assets/images/pallets.jpg'),
             fit: BoxFit.cover,
           ),
         ),
         child: ListTile(
+          // minVerticalPadding: 5.0,
           leading: CircleAvatar(
-            backgroundImage: AssetImage('assets/images/babe.jpg'),
+            backgroundImage: AssetImage('assets/images/girl_09.jpg'),
+            radius: 40.0,
           ),
           title: Text(
-            "Cute Girl",
+            "Faye Lim",
             style: TextStyle(
               color: Colors.white,
               fontSize: 16,
             ),
           ),
           subtitle: Text(
-            "My Love",
+            "your guide",
             style: TextStyle(
               color: Colors.white,
               fontSize: 12,
@@ -59,17 +58,17 @@ class NoStackDrawer extends StatelessWidget {
   Widget buildMenuItems(BuildContext context) {
     return Column(
       children: [
-        MenuOption(
+        DrawerOption(
           title: "Agenda",
           onTap: onTap,
           leading: const Icon(Icons.calendar_month),
         ),
-        MenuOption(
+        DrawerOption(
           title: "Nueva cita",
           onTap: onTap,
           leading: const Icon(Icons.add_task),
         ),
-        MenuOption(
+        DrawerOption(
           title: "Editar horarios",
           onTap: onTap,
           leading: const Icon(Icons.schedule),
@@ -81,12 +80,12 @@ class NoStackDrawer extends StatelessWidget {
             color: Colors.black26,
           ),
         ),
-        MenuOption(
+        DrawerOption(
           title: "Configuracion",
           onTap: onTap,
           leading: const Icon(Icons.settings_outlined),
         ),
-        MenuOption(
+        DrawerOption(
           title: "Cerrar Sesión",
           onTap: onTap,
           leading: const Icon(Icons.logout),

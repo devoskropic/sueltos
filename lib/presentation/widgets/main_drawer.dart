@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sueltos/pages/imports.dart';
+import 'package:sueltos/presentation/pages/home_page.dart';
+import 'package:sueltos/presentation/pages/drawer_children/imports.dart';
 
 class MainDrawer extends StatelessWidget {
   const MainDrawer({
@@ -37,7 +38,7 @@ class MainDrawer extends StatelessWidget {
             bottom: 3.0,
             left: 2.0,
             child: Text(
-              "A drawer title",
+              "Stateless Drawer",
               style: TextStyle(color: Colors.black, fontSize: 18),
             ),
           )

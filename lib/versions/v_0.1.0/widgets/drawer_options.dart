@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class MenuOption extends StatelessWidget {
-  const MenuOption({
+class DrawerOption extends StatelessWidget {
+  const DrawerOption({
     super.key,
     required this.title,
     required this.onTap,

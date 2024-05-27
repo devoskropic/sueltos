@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sueltos/pages/home_page.dart';
+import 'package:sueltos/presentation/pages/home_page.dart';
+import 'package:sueltos/presentation/themes/app_theme.dart';
 
 void main() {
   runApp(const MainApp());
@@ -15,24 +16,6 @@ class MainApp extends StatelessWidget {
       theme: appTheme(),
       home: const HomePage(),
       debugShowCheckedModeBanner: false,
-    );
-  }
-
-  ThemeData appTheme() {
-    return ThemeData(
-      // primarySwatch: Colors.blue,
-      appBarTheme: const AppBarTheme(
-        elevation: 5,
-        color: Colors.deepPurpleAccent,
-        iconTheme: IconThemeData(color: Colors.black),
-        titleTextStyle: TextStyle(color: Colors.black, fontSize: 20),
-      ),
-      drawerTheme: const DrawerThemeData(
-        // backgroundColor: Colors.transparent,
-        backgroundColor: Colors.white60,
-      ),
-      useMaterial3: true,
-      colorScheme: ColorScheme.fromSeed(seedColor: Colors.greenAccent),
     );
   }
 }

@@ -1,14 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:sueltos/versions/v_0.1.0/widgets/imports.dart';
+import 'package:sueltos/versions/v_1.0.0/widgets/main_drawer.dart';
 
-class Home extends StatefulWidget {
-  const Home({super.key});
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
 
-  @override
-  State<Home> createState() => _HomeState();
-}
-
-class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     // final theme = Theme.of(context);
@@ -17,22 +12,9 @@ class _HomeState extends State<Home> {
     return Scaffold(
       appBar: AppBar(
         elevation: 3,
-        title: const Text("Drawer Example"),
+        title: const Text("Widgets Sueltos"),
       ),
-
-      // drawer: DrawerHdr(
-      //   onTap: () {
-      //     Navigator.pop(context);
-      //   },
-      // ),
-
-      drawer: NoStackDrawer(
-        onTap: () {
-          Navigator.pop(context);
-        },
-      ),
-
-      // drawer: const OsaDrawer(),
+      drawer: const MainDrawer(),
       body: Center(
         child: Builder(
           builder: (context) => ElevatedButton(

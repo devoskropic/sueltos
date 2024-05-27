@@ -3,9 +3,7 @@
 import 'package:flutter/material.dart';
 
 class OsaDrawer extends StatelessWidget {
-  const OsaDrawer({
-    super.key,
-  });
+  const OsaDrawer({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -26,20 +24,20 @@ class OsaDrawer extends StatelessWidget {
     return const SizedBox(
       height: 160,
       child: UserAccountsDrawerHeader(
-        accountName: Text("Beautiful Girl"),
+        accountName: Text("Freya Ganttwell"),
         accountEmail: Text(
-          "mababe@gmail.com",
+          "freya.gantt@gmail.com",
           style: TextStyle(fontSize: 12),
         ),
         currentAccountPicture: CircleAvatar(
           backgroundColor: Colors.transparent,
-          backgroundImage: AssetImage('assets/images/babe.jpg'),
+          backgroundImage: AssetImage('assets/images/girl_02.jpg'),
         ),
         decoration: BoxDecoration(
           color: Colors.deepPurpleAccent,
           image: DecorationImage(
             fit: BoxFit.cover,
-            image: AssetImage('assets/images/salon_1.jpg'),
+            image: AssetImage('assets/images/misty.jpg'),
           ),
         ),
       ),
